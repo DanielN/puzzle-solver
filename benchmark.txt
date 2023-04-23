@@ -1,0 +1,20 @@
+openjdk version "17" 2021-09-14
+OpenJDK Runtime Environment (build 17+35-2724)
+OpenJDK 64-Bit Server VM (build 17+35-2724, mixed mode, sharing)
+
+AMD Ryzen 7 2700X Eight-Core Processor
+
+16 threads
+
+SolverByPiece:
+  Solutions: 301350, tries: 22407384882, time: 71.308 s, speed: 314233815 tries/s -- First multithreaded "fast" version
+  Solutions: 301350, tries: 19626148051, time: 68.129 s, speed: 288073332 tries/s -- More search tree pruning
+  Solutions: 301350, tries:  4783158924, time: 10.037 s, speed: 476552647 tries/s -- Reverse piece order
+  Solutions: 301350, tries:  4348918015, time:  9.466 s, speed: 459425101 tries/s -- Sort pieces by variant count
+  Solutions: 301350, tries:  4109262078, time:  8.137 s, speed: 505009472 tries/s -- Prune by variant size
+
+SolverByPosition:
+  Solutions: 301350, tries:  1830481941, time: 66.443 s, speed:  27549658 tries/s -- 1 thread
+  Solutions: 301350, tries:  1830481941, time:  7.694 s, speed: 237910312 tries/s -- 8 threads
+  Solutions: 301350, tries:  1830481941, time:  6.640 s, speed: 275674991 tries/s -- 16 threads
+  Solutions: 301350, tries:  1830481941, time:  5.971 s, speed: 306562040 tries/s -- Don't count tries
